@@ -3,6 +3,9 @@ Rodar rodar o teste é necessário o Gatling Open Source.
 Para obter o Gatling Open Source na página www.gatling.io
 Baixar o Gatling Open Source e colocar o arquivo Desafio.scala dentro da pasta do gatling user-files/simulations e user-files/resources para emails.csv 
 que são as pastas padrões para configurar os testes em Gatling
+Entrar no modo de linha de comando na pasta bin do gatling
+e digitar o comando gatling.bat no Windows ou ./gatling.sh no Linux
+Escolher a opção que representar o Desafio.scala
 Ao rodar o teste é necessário descartar o email utilizado na execução anterior e criar um novo em emails.csv seguindo a 
 numeração flavioNN@flavio.com onde NN deve ser incrementado (pois o site valida o email ao criar um novo cadastro).
 Para rodar um teste de performance um cenário com M usuário é necessário criar os M e-mails no arquivo emails.csv e trocar o número de usuários 
