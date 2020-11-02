@@ -26,12 +26,15 @@ O número de usuários pode ser elevado gradualmente de acordo com a seção
 
   setUp(scn.inject(rampUsers(5) during (10 seconds)).protocols(httpProtocol))
   
-  Esta configuração insere 5 usuários durante 10 segundos, ou seja, 1 usuário a cada 2 segundos. O Gatling permite outras formas de controlar a quantidade de
+  Esta configuração insere 5 usuários durante 10 segundos, ou seja, 1 usuário a cada 2 segundos. O Gatling permite outras formas de submeter a quantidade de
   usuários virtuais. Um número maior de usuários significa um maior consumo de recursoss do computador que está gerando a carga, portanto é necessário 
-  atenção a essa configuração. É possível ainda controlar a quantidade de iterações que cada usuários realiza para demonstrar a capacidade de paralelismo 
-  da aplicação, no desafio 2 em questão somente uma iteração é realizada.
+  atenção a essa configuração. É possível ainda controlar a quantidade de iterações que cada usuários realiza e também a quantidade de requisições por segundo.
+  Após algumas execuções do teste Desafio2.cala , a a plicação parece não responder mais que 7 requisições por segundos para um único cliente 
+  conforme o relatório em anexo.desafio2-20201102203900271
+  Poderia ser investigado a causa desse gargalo, quem sabe alguma limitação ativa do ambiente.
   
-  Os resultados das execuções dos testes se encontram por padrão na pasta results do Gatling.
+  Os resultados das execuções dos testes se encontram por padrão na pasta results do Gatling, é gerada uma pasta com prefixo do nome do cenário que foi executado
+  seguido da data e horário da execução.
   
 
 
