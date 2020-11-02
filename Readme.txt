@@ -20,6 +20,21 @@ ocorrerá um erro em tempo de execução e o teste for abortado, existe formas d
 entretanto a aplicação não permitiria reutilizar a entrada (email).
 
 
+DESAFIO 2 - TESTE DA API
+O teste foi criado em Gatling pois é uma ferramenta apropriada a gerar elevadas cargas que as APIs sofrem.
+O número de usuários pode ser elevado gradualmente de acordo com a seção
+
+  setUp(scn.inject(rampUsers(5) during (10 seconds)).protocols(httpProtocol))
+  
+  Esta configuração insere 5 usuários durante 10 segundos, ou seja, 1 usuário a cada 2 segundos. O Gatling permite outras formas de controlar a quantidade de
+  usuários virtuais. Um número maior de usuários significa um maior consumo de recursoss do computador que está gerando a carga, portanto é necessário 
+  atenção a essa configuração. É possível ainda controlar a quantidade de iterações que cada usuários realiza para demonstrar a capacidade de paralelismo 
+  da aplicação, no desafio 2 em questão somente uma iteração é realizada.
+  
+  Os resultados das execuções dos testes se encontram por padrão na pasta results do Gatling.
+  
+
+
 
 
 	
